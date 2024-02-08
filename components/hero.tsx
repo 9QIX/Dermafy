@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">
-              Make your website <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">wonderful</span>
+              Make your website <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">DERMAFY</span>
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           {/* Hero image */}
-          <ModalVideo
+          {/* <ModalVideo
             thumb={VideoThumb}
             thumbWidth={768}
             thumbHeight={432}
@@ -57,7 +57,7 @@ export default function Hero() {
             video="/videos/video.mp4"
             videoWidth={1920}
             videoHeight={1080}
-          />
+          /> */}
         </div>
       </div>
     </section>
