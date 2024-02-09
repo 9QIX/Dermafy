@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Simple",
+  title: "Home - Dermafy",
   description: "Page description",
 };
 
@@ -8,15 +8,17 @@ import Features from "@/components/features";
 import FeaturesBlocks from "@/components/features-blocks";
 import Testimonials from "@/components/testimonials";
 import Newsletter from "@/components/newsletter";
+import DermafyFunction from "@/components/dermafy-function";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       {/* <Features /> */}
       {/* <FeaturesBlocks /> */}
       {/* <Testimonials /> */}
       {/* <Newsletter /> */}
+      <DermafyFunction />
     </>
   );
 }
