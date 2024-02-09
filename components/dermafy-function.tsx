@@ -1,46 +1,30 @@
-import React, { FormEvent } from "react";
-import "flowbite";
+"use client";
 
-const DermafyFunction: React.FC = () => {
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // handle the submit logic here
-  };
-
+export default function DermafyFunction() {
   return (
-    <section id="section-to-scroll" className="relative flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold text-[#00B2FF] mb-8">Try Dermafy!</h1>
-      <form method="post" encType="multipart/form-data" action="/img" className="max-w-xl bg-gray-200 px-6 md:px-16 pb-12 pt-12 text-center rounded-2xl" onSubmit={handleSubmit}>
-        <div className="bg-mb-4 border-none text-center">
-          <div className="mb-2">
-            <label htmlFor="image_uploads" className="block text-[16px] font-medium text-[#1E1E1E] pb-5">
-              Upload or Take Your Image Here!
-            </label>
-            <input
-              type="file"
-              id="image_uploads"
-              name="image_uploads"
-              accept="image/*"
-              required
-              className="bg-[#1f2937] text-[#00B2FF] py-2 md:py-3 px-4 md:px-6 rounded-xl text-md md:text-xl focus:outline-none focus:border-blue-500 hover:border-blue-500"
-            />
+    <section className="relative">
+      {/* Section background (needs .relative class on parent and next sibling elements) */}
+      {/* <div className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-900 pointer-events-none" aria-hidden="true"></div> */}
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="py-12 md:py-20">
+          {/* Section header */}
+          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+            <h2 className="h2 mb-4">Try Dermafy</h2>
+            {/* <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p> */}
+          </div>
+
+          {/* User input upload file */}
+          <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
+            {/* 1st item */}
+            <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"></svg>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Headless CMS</h4>
+              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
-            <button
-              type="submit"
-              name="submit"
-              className="bg-[#00B2FF] text-white py-2 px-4 md:px-6 rounded-xl font-medium md:text-xl m-4
-                hover:bg-[#1FC0CA] hover:text-[#244f6b] transition duration-250"
-            >
-              Dermafy!
-            </button>
-          </div>
-        </div>
-      </form>
+      </div>
     </section>
   );
-};
-
-export default DermafyFunction;
+}
