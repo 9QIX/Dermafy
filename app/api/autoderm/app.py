@@ -12,7 +12,7 @@ app = FastAPI()
 
 @app.get("/")
 async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("dermafy-function.tsx", {"request": request})
 
 @app.post("/img/")
 async def process(
@@ -33,8 +33,9 @@ async def process(
     )
 
     data = response.json()
-    predictions = data["predictions"]
+    predictions = data["prediction.tsx"]
 
     return templates.TemplateResponse(
         "prediction.tsx", {"request": request, "predictions": predictions}
     )
+
