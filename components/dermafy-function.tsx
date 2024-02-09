@@ -16,19 +16,34 @@ export default function DermafyFunction() {
           </div>
 
           {/* User input upload file */}
-          <div className="relative flex flex-col items-center justify-center h-screen">
+          <div className="relative flex flex-col items-center justify-center h-screen ">
             {/* 1st item */}
-            <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+            <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl w-full max-w-md">
               <form method="post" encType="multipart/form-data" action="/img">
                 {/* Age input field */}
-                <div className="mb-2">
-                  <label htmlFor="age">Age</label>
-                  <input id="age" name="age" type="number" required />
+                <div className="mb-4">
+                  <label htmlFor="age" className="block text-gray-700">
+                    Age
+                  </label>
+                  <input
+                    id="age"
+                    name="age"
+                    type="number"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  />
                 </div>
                 {/* Sex selection dropdown */}
-                <div className="mb-2">
-                  <label htmlFor="sex">Sex</label>
-                  <select id="sex" name="sex" required>
+                <div className="mb-4">
+                  <label htmlFor="sex" className="block text-gray-700">
+                    Sex
+                  </label>
+                  <select
+                    id="sex"
+                    name="sex"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  >
                     <option value="male">Male</option>
                     <option value="female" selected>
                       Female
@@ -36,21 +51,29 @@ export default function DermafyFunction() {
                   </select>
                 </div>
                 {/* File upload input */}
-                <div className="mb-2">
-                  <label htmlFor="image_uploads">Choose images to upload</label>
-                  <input type="file" id="image_uploads" name="image_uploads" accept="image/*" required />
+                <div className="mb-4">
+                  <label htmlFor="image_uploads" className="block text-gray-700">
+                    {/* Choose images to upload */}
+                  </label>
+                  <input
+                    type="file"
+                    id="image_uploads"
+                    name="image_uploads"
+                    accept="image/*"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  />
                 </div>
                 {/* Submit button */}
                 <div>
-                  <button className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700" type="submit" name="submit">
+                  <button className="w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700" type="submit" name="submit">
                     Submit
                   </button>
                 </div>
               </form>
 
               <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"></svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Upload Your Image Here!</h4>
-              <button className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700">Submit</button>
+              {/* <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Upload Your Image Here!</h4> */}
             </div>
           </div>
         </div>
