@@ -1,0 +1,27 @@
+<!-- index.html -->
+<form method="post" enctype="multipart/form-data" action="/img">
+  <div>
+    <div>
+      <label for="age"> Age </label>
+      <input id="age" name="age" type="number" required />
+    </div>
+    <div>
+      <label for="sex"> Sex </label>
+      <select id="sex" name="sex" required>
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="image_uploads"> Choose images to upload </label>
+      <input type="file" id="image_uploads" name="image_uploads" accept="image/*" required />
+    </div>
+  </div>
+  <div>
+    <div>
+      <button type="submit" name="submit">Submit</button>
+    </div>
+  </div>
+</form>
