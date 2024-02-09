@@ -19,9 +19,35 @@ export default function DermafyFunction() {
           <div className="relative flex flex-col items-center justify-center h-screen">
             {/* 1st item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
-              <div className="mb-2">
-                <input type="file" id="image_uploads" name="image_uploads" accept="image/*" required />
-              </div>
+              <form method="post" encType="multipart/form-data" action="/img">
+                {/* Age input field */}
+                <div className="mb-2">
+                  <label htmlFor="age">Age</label>
+                  <input id="age" name="age" type="number" required />
+                </div>
+                {/* Sex selection dropdown */}
+                <div className="mb-2">
+                  <label htmlFor="sex">Sex</label>
+                  <select id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female" selected>
+                      Female
+                    </option>
+                  </select>
+                </div>
+                {/* File upload input */}
+                <div className="mb-2">
+                  <label htmlFor="image_uploads">Choose images to upload</label>
+                  <input type="file" id="image_uploads" name="image_uploads" accept="image/*" required />
+                </div>
+                {/* Submit button */}
+                <div>
+                  <button className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700" type="submit" name="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+
               <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"></svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Upload Your Image Here!</h4>
               <button className="px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700">Submit</button>
