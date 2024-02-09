@@ -12,9 +12,9 @@ import Newsletter from "@/components/newsletter";
 export default function Home() {
   return (
     <>
-      <Hero />
-      {/* <Features /> */}
-      {/* <FeaturesBlocks /> */}
+      {/* <Hero /> */}
+      <Features />
+      <FeaturesBlocks />
       {/* <Testimonials /> */}
       {/* <Newsletter /> */}
     </>
