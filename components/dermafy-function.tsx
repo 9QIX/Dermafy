@@ -1,5 +1,7 @@
 "use client";
 
+import { sendFormData } from "./api";
+
 export default function DermafyFunction() {
   return (
     <section className="relative">
