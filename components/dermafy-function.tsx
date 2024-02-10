@@ -16,7 +16,7 @@ export default function DermafyFunction() {
           </div>
 
           {/* User input upload file */}
-          <div className="relative flex flex-col items-center justify-center h-screen ">
+          <div className="relative flex flex-col items-center h-screen ">
             {/* 1st item */}
             <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl w-full max-w-md">
               <form method="post" encType="multipart/form-data" action="/img">
